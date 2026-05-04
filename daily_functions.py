@@ -9,4 +9,4 @@ if __name__ == "__main__":
     print("=" * 50)
     print("DAY 1 — String Utilities")
     print("=" * 50)
-    print("reverse_string('hello')         →", reverse_string("hello"))
+    print("reverse_string('helloow')         →", reverse_string("hello"))
