@@ -14,7 +14,13 @@ def factorial(n: int) -> int:
         result *= i
     return result
 
-
+def fibonacci(n: int) -> list:
+    if n <= 0:
+        return []
+    seq = [0, 1]
+    while len(seq) < n:
+        seq.append(seq[-1] + seq[-2])
+    return seq[:n]
 if __name__ == "__main__":
     print("=" * 50)
     print("DAY 1 — String Utilities")
@@ -23,3 +29,5 @@ if __name__ == "__main__":
     print("is_palindrome('racecar')        →", is_palindrome("racecar"))
     print("count_vowels('hello world')     →", count_vowels("hello world"))
     print("factorial(5)                    →", factorial(5))
+    print("fibonacci(7)                    →", fibonacci(7))
+ 
