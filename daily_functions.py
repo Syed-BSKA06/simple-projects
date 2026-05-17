@@ -13,6 +13,8 @@ def factorial(n: int) -> int:
     for i in range(2, n + 1):
         result *= i
     return result
+def flatten_list(nested: list) -> list:
+    return [item for sublist in nested for item in sublist]
 
 def fibonacci(n: int) -> list:
     if n <= 0:
@@ -30,4 +32,5 @@ if __name__ == "__main__":
     print("count_vowels('hello world')     →", count_vowels("hello world"))
     print("factorial(5)                    →", factorial(5))
     print("fibonacci(7)                    →", fibonacci(7))
+    print("flatten_list([[1,2],[3,4]])      →", flatten_list([[1, 2], [3, 4]]))
  
