@@ -23,6 +23,14 @@ def fibonacci(n: int) -> list:
     while len(seq) < n:
         seq.append(seq[-1] + seq[-2])
     return seq[:n]
+def remove_duplicates(lst: list) -> list:
+    seen = set()
+    result = []
+    for item in lst:
+        if item not in seen:
+            seen.add(item)
+            result.append(item)
+    return result
 if __name__ == "__main__":
     print("=" * 50)
     print("DAY 1 — String Utilities")
@@ -33,4 +41,5 @@ if __name__ == "__main__":
     print("factorial(5)                    →", factorial(5))
     print("fibonacci(7)                    →", fibonacci(7))
     print("flatten_list([[1,2],[3,4]])      →", flatten_list([[1, 2], [3, 4]]))
+    print("remove_duplicates([1,2,2,3,1])  →", remove_duplicates([1, 2, 2, 3, 1]))
  
