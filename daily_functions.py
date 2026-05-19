@@ -31,6 +31,10 @@ def remove_duplicates(lst: list) -> list:
             seen.add(item)
             result.append(item)
     return result
+def find_max_min(lst: list) -> dict:
+    if not lst:
+        raise ValueError("List must not be empty.")
+    return {"max": max(lst), "min": min(lst)}
 if __name__ == "__main__":
     print("=" * 50)
     print("DAY 1 — String Utilities")
@@ -42,4 +46,6 @@ if __name__ == "__main__":
     print("fibonacci(7)                    →", fibonacci(7))
     print("flatten_list([[1,2],[3,4]])      →", flatten_list([[1, 2], [3, 4]]))
     print("remove_duplicates([1,2,2,3,1])  →", remove_duplicates([1, 2, 2, 3, 1]))
+    print("find_max_min([3,7,1,9,4])       →", find_max_min([3, 7, 1, 9, 4]))
+ 
  
